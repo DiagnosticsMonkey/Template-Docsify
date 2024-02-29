@@ -1,5 +1,0 @@
-# PCB
-
-- [Schematic]()
-- [Layout]()
-- [BoM]()
