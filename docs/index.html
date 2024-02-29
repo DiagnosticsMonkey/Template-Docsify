@@ -7,7 +7,20 @@
   <meta name="description" content="">
   <link rel="icon" href="_media/crest_black.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css" />
+  <!-- Auto system colour, no-one changes from preference... -->
+  <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+
+  <style>
+    :root {
+
+      /* Change the theme color hue (0-360) */
+      --theme-hue: 325;
+
+      --heading-h2-border-style: none;
+    }
+  </style>
+
 </head>
 <body>
   <div data-app id="app">Loading...</div>
@@ -58,6 +71,7 @@
 
     // Docsify Configuration
     window.$docsify = {
+      name: pagePrefix,
 	  repo: repoURL,
       customPageTitle: {
         prefix:     pagePrefix,
@@ -71,6 +85,10 @@
       loadSidebar: true,
       auto2top: true,
 
+      githubEditLink: {
+      repo: repoURL,
+      branch: "trunk",
+      },
       footer: {
         copy: '&copy; James Marsden, 2024<br />',
         auth: 'TAKTAK - taktak.co.uk',
@@ -78,15 +96,9 @@
         style: 'text-align: right;',
         class: 'footer',
       },
-      darklightTheme: {
-        dark: {
-          docsify_logo_url: "url(_media/crest_white.svg)",
-          footer_logo_url: "url(_media/crest_white.svg)"
-        },
-        light: {
-          docsify_logo_url: "url(_media/crest_black.svg)",
-          footer_logo_url: "url(_media/crest_black.svg)"
-        },
+      themeable: {
+          readyTransition : true, // default
+          responsiveTables: true  // default
       },
       tabs: {
         tabComments: false,
@@ -105,18 +117,19 @@
 
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <!-- docsify-darklight-theme -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js" type="text/javascript"></script>
+  <!-- docsify-themeable -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
 
   <!-- Text search -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <!-- Title config -->
   <script src="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-title@2.x/dist/plugin.min.js"></script>
-  <!-- Footer -->
-  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
   <!-- Pagination plugin -->
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-
+  <!-- Footer -->
+  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+  <!-- Edit in GitHub -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-github-edit-link@1/dist/github-edit-link.min.js"></script>
 
   <!-- Tip / note blocks -->
   <script src="//unpkg.com/docsify-plugin-flexible-alerts"></script>
