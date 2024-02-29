@@ -16,7 +16,6 @@
 
       /* Change the theme color hue (0-360) */
       --theme-hue: 325;
-
       --heading-h2-border-style: none;
     }
   </style>
@@ -29,40 +28,6 @@
     /* Fix issue on mobile devices where a custom cover image goes off the screen. */
     section.cover.show {
         height: 100%;
-    }
-    
-    /* Scale header image. */
-    .cover-main img {
-        max-height: 20%;
-        max-width: 20%;
-    }
-		
-    @media (prefers-color-scheme: light) {
-      .app-name-link img {
-          content: var(--docsify_logo_url);
-		  margin-left: auto;
-          margin-right: auto;
-		  width: 150px;
-      }
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .app-name-link img {
-          content: var(--docsify_logo_url);
-		  margin-left: auto;
-          margin-right: auto;
-		  width: 150px;
-      }
-    }
-    .icon {
-      line-height: 1;
-    }
-    .footer {
-      text-align: right;
-      background-image: var(--footer_logo_url);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: left center;
     }
   </style>
   <script>
