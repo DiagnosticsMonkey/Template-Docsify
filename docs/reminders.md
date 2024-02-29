@@ -2,6 +2,15 @@
 
 ## Note blocks
 
+!> **Notice** using themeable. This go brr.  
+Hey hey.
+
+?> **Tip** using themeable. This go brr too
+
+---
+
+Using flexible alerts
+
 > [!NOTE]
 > Blergh
 
