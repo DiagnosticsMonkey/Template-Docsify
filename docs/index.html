@@ -1,79 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
-    <title>Where's My Cow?</title>
-    <meta name="description"
-        content="Documentation for Where's My Cow?">
-
-    <link rel="stylesheet" href="//unpkg.com/docsify@4/lib/themes/vue.css">
-    
-    <style>
-        /* Fix issue on mobile devices where a custom cover image goes off the screen. */
-        section.cover.show {
-            height: 100%;
-        }
-
-        /* Scale header image. */
-        .cover-main img {
-            max-height: 20%;
-            max-width: 20%;
-        }
-    </style>
-
-    <!-- Docsify core. -->
-    <script defer src="//unpkg.com/docsify@4/lib/docsify.min.js"></script>
-
-    <!-- Syntax highlighting.-->
-    <script defer src="//unpkg.com/prismjs@1/components/prism-markdown.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-
-    <!-- Edit on GitHub plugin. -->
-    <script src="//unpkg.com/docsify-edit-on-github@1/index.js"></script>
-
-    <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-
+  <meta charset="UTF-8">
+  <title></title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="">
+  <link rel="icon" href="_media/crest_black.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css" />
 </head>
-
 <body>
-    <div id="app">Loading ...</div>
+  <div data-app id="app">Loading...</div>
+  <style>
+  
+    /* Fix issue on mobile devices where a custom cover image goes off the screen. */
+    section.cover.show {
+        height: 100%;
+    }
+    
+    /* Scale header image. */
+    .cover-main img {
+        max-height: 20%;
+        max-width: 20%;
+    }
+		
+    @media (prefers-color-scheme: light) {
+      .app-name-link img {
+          content: var(--docsify_logo_url);
+		  margin-left: auto;
+          margin-right: auto;
+		  width: 150px;
+      }
+    }
 
-    <script>
-        var repoURL = "https://github.com/PandiTAKTAK/Template-Docsify";
-        var editPath = repoURL + "/blob/trunk/docs/";
-        var editMsg = "Edit page";
-        
-        window.$docsify = {
-            name: "Docsify Template",
-            repo: repoURL,
-            
-            auto2top: true,
-            coverpage: true,
-            loadSidebar: true,
-            loadNavbar: false,
-            maxLevel: 4,
-            subMaxLevel: 2,
-            themeColor: "#427042",
+    @media (prefers-color-scheme: dark) {
+      .app-name-link img {
+          content: var(--docsify_logo_url);
+		  margin-left: auto;
+          margin-right: auto;
+		  width: 150px;
+      }
+    }
+    .icon {
+      line-height: 1;
+    }
+    .footer {
+      text-align: right;
+      background-image: var(--footer_logo_url);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+  </style>
+  <script>
+    var repoURL = "https://github.com/PandiTAKTAK/Template-Docsify";
+    var pagePrefix = "Docsify Template";
 
-            plugins: [
-                EditOnGithubPlugin.create(editPath, null, editMsg)
-            ],
+    // Docsify Configuration
+    window.$docsify = {
+	  repo: repoURL,
+      customPageTitle: {
+        prefix:     pagePrefix,
+        suffix:     false,
+        separator:   '-',
+      },
+      subMaxLevel: 3,
+      loadNavbar: false,
+      coverpage: true,
+      onlyCover: false,
+      loadSidebar: true,
+      auto2top: true,
 
-            pagination: {
-                previousText: 'Previous',
-                nextText: 'Next',
-                crossChapter: true,
-                crossChapterText: true,
-            },
-        }
+      footer: {
+        copy: '&copy; James Marsden, 2024<br />',
+        auth: 'TAKTAK - taktak.co.uk',
+        pre: '<hr />',
+        style: 'text-align: right;',
+        class: 'footer',
+      },
+      darklightTheme: {
+        dark: {
+          docsify_logo_url: "url(_media/crest_white.svg)",
+          footer_logo_url: "url(_media/crest_white.svg)"
+        },
+        light: {
+          docsify_logo_url: "url(_media/crest_black.svg)",
+          footer_logo_url: "url(_media/crest_black.svg)"
+        },
+      },
+      tabs: {
+        tabComments: false,
+      },
+      'flexible-alerts': {
+        style: 'callout',
+      },
+      pagination: {
+        previousText: 'PREVIOUS',
+        nextText: 'NEXT',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+    }
+  </script>
 
-    </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- docsify-darklight-theme -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js" type="text/javascript"></script>
 
+  <!-- Text search -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- Title config -->
+  <script src="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-title@2.x/dist/plugin.min.js"></script>
+  <!-- Footer -->
+  <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+  <!-- Pagination plugin -->
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+
+  <!-- Tip / note blocks -->
+  <script src="//unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <!-- docsify-tabs (latest v1.x.x) -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
+  <!-- Zoom image -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- Code copy -->
+  <script src="//unpkg.com/docsify-copy-code@2"></script>
+  <!-- Syntax highlighting.-->
+  <script defer src="//unpkg.com/prismjs@1/components/prism-markdown.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <!-- Terminal block -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-terminal-block@1.0.3"></script>
+  
 </body>
-
 </html>

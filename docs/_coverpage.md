@@ -1,15 +1,12 @@
-![logo](_media/cow.png) <!-- from "https://www.flaticon.com/free-icons/cow" -->
+![logo](_media/crest_black.svg)
 
-#  Headline Title <small>0.0.1</small>
+#  Headline Title <small>0.1</small>
 
 >  Docsify template from TAKTAK
 
-- :cow: A
-- :battery: B
-- :cloud: C
+- :shit:
+- :angry:
+- [Emoji list](https://gist.github.com/rxaviers/7360908) :eyes:
 
 [GitHub](https://github.com/PandiTAKTAK/)
 [Getting Started](/README)
-
-<!-- Background colour -->
-![color](#CBC3E3)
