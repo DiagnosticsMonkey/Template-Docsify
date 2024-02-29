@@ -474,7 +474,7 @@
     ]
   ],
   "text_variables": {
-    "PROJECT_DESCRIPTION": "LoRa / GPS based tracker",
-    "PROJECT_NAME": "Where's My Cow?"
+    "PROJECT_DESCRIPTION": "TAKTAK Description KiCAD",
+    "PROJECT_NAME": "TAKTAK ProjName KiCAD"
   }
 }

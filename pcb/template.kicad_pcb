@@ -6,8 +6,8 @@
 
   (paper "A4")
   (title_block
-    (title "Ear Tag")
-    (date "2023-09-03")
+    (title "Top Level")
+    (date "2024-02-29")
     (rev "0.1")
   )
 
@@ -81,8 +81,8 @@
     )
   )
 
-  (property "PROJECT_DESCRIPTION" "LoRa / GPS based tracker")
-  (property "PROJECT_NAME" "Where's My Cow?")
+  (property "PROJECT_DESCRIPTION" "TAKTAK Description KiCAD")
+  (property "PROJECT_NAME" "TAKTAK ProjName KiCAD")
 
   (net 0 "")
 
