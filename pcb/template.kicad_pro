@@ -474,6 +474,8 @@
     ]
   ],
   "text_variables": {
+    "GIT_HEALTH": "TAKTAK",
+    "GIT_VERSION": "TAKTAK",
     "PROJECT_DESCRIPTION": "TAKTAK Description KiCAD",
     "PROJECT_NAME": "TAKTAK ProjName KiCAD"
   }
