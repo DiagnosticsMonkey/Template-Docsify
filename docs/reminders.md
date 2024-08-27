@@ -56,7 +56,7 @@ Sync change
 
 ## Zoooooom
 
-![Img go brrrr](_media\crest_colour.png)
+![Img go brrrr](_media\diagnosticsMonkeyWhite.png)
 
 ## Highlighting & Copy
 
